@@ -16,7 +16,7 @@ with open("scientist_birthdays.json", "r") as fh:
     monthes =[]
     for name in birthdays :
         day = datetime.datetime.strptime( birthdays[name], "%m/%d/%Y")
-        monthes.append( day.strftime("%B"))
+        monthes.append( int(day.strftime("%m")))
     
     from collections import Counter
     monthes= Counter(monthes)
